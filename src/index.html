@@ -1,0 +1,880 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Seo Yeon Park - Naval Architect Portfolio</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        colors: {
+          "primary": "#001f5c",
+          "background-light": "#f5f6f8",
+          "background-dark": "#0f1623",
+          "text-main": "#0c121d",
+          "text-muted": "#4b5563",
+        },
+        fontFamily: { "display": ["Inter", "sans-serif"] },
+        borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+      },
+    },
+  }
+</script>
+<style>
+  html { scroll-behavior: smooth; }
+  .nav-link.active { color: #001f5c; font-weight: 700; }
+  .dark .nav-link.active { color: #ffffff; }
+</style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-text-main dark:text-slate-100 antialiased overflow-x-hidden">
+
+<!-- ========== NAVIGATION ========== -->
+<header id="top" class="sticky top-0 z-50 w-full bg-background-light/95 backdrop-blur-sm border-b border-primary/10 dark:bg-background-dark/95 dark:border-slate-800">
+  <div class="max-w-[1280px] mx-auto px-6 md:px-10 h-16 flex items-center justify-between">
+    <a href="#home" class="flex items-center gap-3">
+      <div class="size-8 flex items-center justify-center rounded bg-primary text-white">
+        <span class="material-symbols-outlined text-xl">sailing</span>
+      </div>
+      <span class="text-primary dark:text-slate-100 text-lg font-bold tracking-tight">Seo Yeon Park</span>
+    </a>
+    <nav class="hidden md:flex items-center gap-8">
+      <a class="nav-link text-text-muted hover:text-primary dark:text-slate-400 dark:hover:text-white text-sm font-medium transition-colors" href="#about">About</a>
+      <a class="nav-link text-text-muted hover:text-primary dark:text-slate-400 dark:hover:text-white text-sm font-medium transition-colors" href="#projects">Projects</a>
+      <a class="nav-link text-text-muted hover:text-primary dark:text-slate-400 dark:hover:text-white text-sm font-medium transition-colors" href="#skills">Skills</a>
+      <a class="nav-link text-text-muted hover:text-primary dark:text-slate-400 dark:hover:text-white text-sm font-medium transition-colors" href="#contact">Contact</a>
+    </nav>
+    <button id="menu-btn" class="md:hidden p-2 text-text-muted hover:text-primary" aria-label="Toggle menu">
+      <span class="material-symbols-outlined" id="menu-icon">menu</span>
+    </button>
+  </div>
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="hidden md:hidden bg-background-light dark:bg-background-dark border-t border-primary/10 dark:border-slate-800 px-6 py-4 flex flex-col gap-4">
+    <a class="text-text-muted hover:text-primary dark:text-slate-400 dark:hover:text-white text-sm font-medium transition-colors py-2 border-b border-primary/5 dark:border-slate-800" href="#about" onclick="closeMobileMenu()">About</a>
+    <a class="text-text-muted hover:text-primary dark:text-slate-400 dark:hover:text-white text-sm font-medium transition-colors py-2 border-b border-primary/5 dark:border-slate-800" href="#projects" onclick="closeMobileMenu()">Projects</a>
+    <a class="text-text-muted hover:text-primary dark:text-slate-400 dark:hover:text-white text-sm font-medium transition-colors py-2 border-b border-primary/5 dark:border-slate-800" href="#skills" onclick="closeMobileMenu()">Skills</a>
+    <a class="text-text-muted hover:text-primary dark:text-slate-400 dark:hover:text-white text-sm font-medium transition-colors py-2" href="#contact" onclick="closeMobileMenu()">Contact</a>
+  </div>
+</header>
+
+<!-- ========== HERO SECTION ========== -->
+<section id="home" class="min-h-[calc(100vh-4rem)] flex flex-col justify-center">
+  <div class="max-w-[1280px] mx-auto w-full px-6 md:px-10 py-12 lg:py-20">
+    <div class="grid lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+      <!-- Text Content -->
+      <div class="lg:col-span-7 flex flex-col gap-8">
+        <div class="flex flex-col gap-4">
+          <div class="flex items-center gap-2 text-primary dark:text-blue-400 font-semibold text-sm uppercase tracking-wider">
+            <span class="material-symbols-outlined text-lg">location_on</span>
+            <span>Seoul, South Korea &#x1F1F0;&#x1F1F7;</span>
+          </div>
+          <h1 class="text-text-main dark:text-white text-4xl sm:text-5xl lg:text-6xl font-black leading-[1.1] tracking-tight">
+            Naval Architect &amp;<br class="hidden sm:block"/> Marine Designer
+          </h1>
+          <p class="text-text-muted dark:text-slate-400 text-lg sm:text-xl font-normal leading-relaxed max-w-2xl">
+            4+ Years Shaping Maritime Innovation. Specializing in hull optimization, stability analysis, and sustainable vessel design.
+          </p>
+        </div>
+        <div class="flex flex-wrap gap-4 pt-2">
+          <a href="#projects" class="inline-flex items-center justify-center rounded-lg bg-primary hover:bg-primary/90 text-white text-base font-bold h-12 px-8 transition-all hover:translate-y-[-2px] shadow-lg shadow-primary/20">
+            View Projects
+            <span class="material-symbols-outlined ml-2 text-sm">arrow_forward</span>
+          </a>
+          <a href="#contact" class="inline-flex items-center justify-center rounded-lg border-2 border-primary/20 hover:border-primary text-primary dark:text-slate-200 dark:border-slate-700 dark:hover:border-slate-500 text-base font-bold h-12 px-8 transition-all hover:bg-primary/5 dark:hover:bg-slate-800">
+            Download CV
+            <span class="material-symbols-outlined ml-2 text-sm">download</span>
+          </a>
+        </div>
+        <!-- Stats Row -->
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-8 border-t border-primary/10 dark:border-slate-800 mt-4">
+          <div class="flex flex-col p-4 rounded-lg bg-white dark:bg-slate-800 shadow-sm border border-primary/5 dark:border-slate-700">
+            <div class="flex items-center gap-2 mb-2 text-primary dark:text-blue-400">
+              <span class="material-symbols-outlined">work_history</span>
+            </div>
+            <p class="text-3xl font-bold text-text-main dark:text-white">4+ Years</p>
+            <p class="text-sm text-text-muted dark:text-slate-400 font-medium">Experience</p>
+          </div>
+          <div class="flex flex-col p-4 rounded-lg bg-white dark:bg-slate-800 shadow-sm border border-primary/5 dark:border-slate-700">
+            <div class="flex items-center gap-2 mb-2 text-primary dark:text-blue-400">
+              <span class="material-symbols-outlined">directions_boat</span>
+            </div>
+            <p class="text-3xl font-bold text-text-main dark:text-white">20+</p>
+            <p class="text-sm text-text-muted dark:text-slate-400 font-medium">Vessels Designed</p>
+          </div>
+          <div class="flex flex-col p-4 rounded-lg bg-white dark:bg-slate-800 shadow-sm border border-primary/5 dark:border-slate-700">
+            <div class="flex items-center gap-2 mb-2 text-primary dark:text-blue-400">
+              <span class="material-symbols-outlined">public</span>
+            </div>
+            <p class="text-3xl font-bold text-text-main dark:text-white">5</p>
+            <p class="text-sm text-text-muted dark:text-slate-400 font-medium">Countries Worked</p>
+          </div>
+        </div>
+      </div>
+      <!-- Image Content -->
+      <div class="lg:col-span-5 flex justify-center lg:justify-end relative">
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-primary/5 rounded-full blur-3xl -z-10"></div>
+        <div class="relative w-72 h-72 sm:w-96 sm:h-96 lg:w-[450px] lg:h-[450px] rounded-full overflow-hidden border-8 border-white dark:border-slate-800 shadow-2xl">
+          <img alt="Professional headshot of Seo Yeon Park" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBN2NcLM2GmCNw04C0E-Bet9F_6Q1JZJshpg3CNLXJxhchvVz0_cS5bR7O-EmY3vxMG6vdbUT-3mabsWzBR8hAYtF1bICrEIyCG_rXVUyz6Jo3F6KqMXGvUN4kwhikSHTDyic_bjkbhGChVgASsl5bHuzfjdmMt4VQEujMIAHLrcx4oPJ-4NNp50M8uos7DCIyV7j19KFIbABl9iPeFwomeN-5o_j5ei5Lns1L91-xPQBJ7wNJGsZnhpFDahrRQzlXOUjeHdW-6yL4"/>
+        </div>
+        <!-- Floating Badge -->
+        <div class="absolute bottom-4 left-0 sm:bottom-10 sm:left-4 bg-white dark:bg-slate-800 p-4 rounded-xl shadow-lg border border-primary/10 dark:border-slate-700 flex items-center gap-3 animate-bounce" style="animation-duration: 3s;">
+          <div class="size-10 rounded-full bg-green-100 flex items-center justify-center text-green-600">
+            <span class="material-symbols-outlined">verified</span>
+          </div>
+          <div>
+            <p class="text-xs text-text-muted dark:text-slate-400 font-semibold uppercase">Status</p>
+            <p class="text-sm font-bold text-text-main dark:text-white">Open to Work</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== ABOUT SECTION ========== -->
+<section id="about" class="py-20 lg:py-28 bg-white dark:bg-slate-900 border-t border-primary/10 dark:border-slate-800">
+  <div class="max-w-[1280px] mx-auto px-6 md:px-10">
+    <div class="mb-12">
+      <h2 class="text-3xl md:text-4xl font-black text-slate-900 dark:text-white mb-3 tracking-tight">ABOUT ME</h2>
+      <div class="h-1.5 w-16 bg-primary rounded-full"></div>
+    </div>
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16">
+<!-- Left Column: Portrait & Details -->
+<div class="lg:col-span-4 flex flex-col items-center lg:items-start">
+<div class="relative w-full max-w-[320px] aspect-[3/4] rounded-xl overflow-hidden shadow-xl border-[6px] border-white dark:border-slate-800">
+<div class="absolute inset-0 bg-primary/10 z-10 mix-blend-multiply"></div>
+<img alt="Professional portrait of Seo Yeon Park" class="w-full h-full object-cover" data-alt="Professional asian woman portrait in business attire" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDp4fk39b7z1Fw6HS6-Fhw_TY6V2Vypx2FLf-KlFMewpHcNUuOiknDlG3p62qYGpSGYs13zv5Ro6_l_NPS2h-h_xBiICYrrelDrTAXZ52TjO_2SguyqY-f6nNUJeA1YBQJACZDD5YRNvyw6s9EfMZfycSotXysPUO3_MLlseXIwJSkLoA7NFhceQ8Jjln0fG85tUe0MqFB23GQ24TT8YkLTeLfjtvzLjRwGZHk-b-XqAKpKO4r0pfb6idXwbw4cRBhsBWOD80sDyU4"/>
+</div>
+<!-- Decorative Accent -->
+<div class="mt-6 flex items-center gap-3 text-primary dark:text-blue-400">
+<span class="material-symbols-outlined text-3xl">anchor</span>
+<div class="h-0.5 w-16 bg-primary dark:bg-blue-400 rounded-full"></div>
+</div>
+<!-- Quick Contact Info -->
+<div class="mt-8 w-full space-y-4">
+<div class="flex items-center gap-3 p-3 rounded-lg bg-white dark:bg-slate-800 shadow-sm border border-slate-100 dark:border-slate-700">
+<div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary dark:text-blue-400">
+<span class="material-symbols-outlined text-xl">location_on</span>
+</div>
+<div>
+<p class="text-xs text-slate-500 dark:text-slate-400 uppercase font-semibold">Location</p>
+<p class="text-sm font-medium text-slate-900 dark:text-slate-100">Seoul, South Korea</p>
+</div>
+</div>
+<div class="flex items-center gap-3 p-3 rounded-lg bg-white dark:bg-slate-800 shadow-sm border border-slate-100 dark:border-slate-700">
+<div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary dark:text-blue-400">
+<span class="material-symbols-outlined text-xl">mail</span>
+</div>
+<div>
+<p class="text-xs text-slate-500 dark:text-slate-400 uppercase font-semibold">Email</p>
+<p class="text-sm font-medium text-slate-900 dark:text-slate-100">sypark@example.com</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Column: Bio & Resume -->
+<div class="lg:col-span-8 flex flex-col">
+<div class="mb-10">
+<div class="flex items-center gap-4 mb-6">
+<h1 class="text-4xl lg:text-5xl font-bold text-slate-900 dark:text-white tracking-tight">ABOUT ME</h1>
+<div class="h-1 flex-grow bg-slate-200 dark:bg-slate-700 rounded-full max-w-[100px]"></div>
+</div>
+<h3 class="text-xl font-medium text-primary dark:text-blue-400 mb-4">Naval Architect &amp; Marine Engineer</h3>
+<div class="prose prose-lg text-slate-600 dark:text-slate-300 max-w-none leading-relaxed">
+<p class="mb-4">
+                            Hello! I'm Seo Yeon Park, a dedicated Naval Architect with over 4 years of specialized experience in ship structural design and hydrodynamic analysis. My passion lies in creating sustainable maritime solutions that push the boundaries of efficiency and safety.
+                        </p>
+<p>
+                            Currently based in Seoul, I bridge the gap between theoretical hydrodynamics and practical vessel construction. I have a proven track record of optimizing hull forms for reduced resistance and ensuring structural integrity under extreme sea states. I am driven by the challenge of innovative vessel design in an evolving global shipping landscape.
+                        </p>
+</div>
+<div class="flex flex-wrap gap-3 mt-8">
+<span class="px-3 py-1 bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 rounded-full text-sm font-medium border border-slate-200 dark:border-slate-700">Hydrodynamics</span>
+<span class="px-3 py-1 bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 rounded-full text-sm font-medium border border-slate-200 dark:border-slate-700">Structural Analysis</span>
+<span class="px-3 py-1 bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 rounded-full text-sm font-medium border border-slate-200 dark:border-slate-700">ANSYS</span>
+<span class="px-3 py-1 bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 rounded-full text-sm font-medium border border-slate-200 dark:border-slate-700">AutoCAD</span>
+<span class="px-3 py-1 bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 rounded-full text-sm font-medium border border-slate-200 dark:border-slate-700">Green Shipping</span>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<!-- Education Section -->
+<div class="space-y-6">
+<div class="flex items-center gap-3 mb-2">
+<span class="material-symbols-outlined text-primary dark:text-blue-400 text-2xl">school</span>
+<h3 class="text-xl font-bold text-slate-900 dark:text-white">Education</h3>
+</div>
+<div class="bg-white dark:bg-slate-800 p-6 rounded-xl border border-slate-200 dark:border-slate-700 shadow-sm hover:shadow-md transition-shadow relative overflow-hidden group">
+<div class="absolute top-0 left-0 w-1 h-full bg-primary group-hover:w-2 transition-all"></div>
+<span class="text-xs font-bold tracking-wider text-slate-400 uppercase mb-1 block">2015 - 2019</span>
+<h4 class="text-lg font-bold text-slate-900 dark:text-white mb-1">Seoul National University</h4>
+<p class="text-primary dark:text-blue-400 font-medium text-sm mb-3">B.Sc. Naval Architecture &amp; Ocean Engineering</p>
+<p class="text-slate-600 dark:text-slate-400 text-sm">Graduated with Honors. Specialized in Fluid Dynamics and Offshore Structure Design. Capstone project focused on LNG carrier efficiency.</p>
+</div>
+</div>
+<!-- Work Experience Section -->
+<div class="space-y-6">
+<div class="flex items-center gap-3 mb-2">
+<span class="material-symbols-outlined text-primary dark:text-blue-400 text-2xl">work</span>
+<h3 class="text-xl font-bold text-slate-900 dark:text-white">Experience</h3>
+</div>
+<!-- Job 1 -->
+<div class="bg-white dark:bg-slate-800 p-6 rounded-xl border border-slate-200 dark:border-slate-700 shadow-sm hover:shadow-md transition-shadow relative overflow-hidden group">
+<div class="absolute top-0 left-0 w-1 h-full bg-primary group-hover:w-2 transition-all"></div>
+<span class="text-xs font-bold tracking-wider text-slate-400 uppercase mb-1 block">2021 - Present</span>
+<h4 class="text-lg font-bold text-slate-900 dark:text-white mb-1">Hyundai Heavy Industries</h4>
+<p class="text-primary dark:text-blue-400 font-medium text-sm mb-3">Senior Naval Architect</p>
+<ul class="text-slate-600 dark:text-slate-400 text-sm list-disc pl-4 space-y-1">
+<li>Lead structural design for next-gen eco-friendly container vessels.</li>
+<li>Conduct FEA analysis to optimize hull weight.</li>
+</ul>
+</div>
+<!-- Job 2 -->
+<div class="bg-white dark:bg-slate-800 p-6 rounded-xl border border-slate-200 dark:border-slate-700 shadow-sm hover:shadow-md transition-shadow relative overflow-hidden group">
+<div class="absolute top-0 left-0 w-1 h-full bg-slate-300 dark:bg-slate-600 group-hover:bg-primary transition-colors"></div>
+<span class="text-xs font-bold tracking-wider text-slate-400 uppercase mb-1 block">2019 - 2021</span>
+<h4 class="text-lg font-bold text-slate-900 dark:text-white mb-1">Samsung Heavy Industries</h4>
+<p class="text-primary dark:text-blue-400 font-medium text-sm mb-3">Junior Engineer</p>
+<ul class="text-slate-600 dark:text-slate-400 text-sm list-disc pl-4 space-y-1">
+<li>Assisted in hydrodynamic performance testing.</li>
+<li>Collaborated on retrofitting projects for LNG propulsion.</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+  </div>
+</section>
+
+<!-- ========== PROJECTS SECTION ========== -->
+<section id="projects" class="py-20 lg:py-28 bg-background-light dark:bg-background-dark border-t border-primary/10 dark:border-slate-800">
+  <div class="max-w-[1280px] mx-auto px-6 md:px-10">
+    <!-- Section Header -->
+<div class="mb-10">
+<h2 class="text-slate-900 dark:text-white text-3xl font-extrabold leading-tight tracking-tight inline-block border-b-4 border-primary pb-1">MY PROJECTS</h2>
+<p class="mt-4 text-slate-600 dark:text-slate-400 max-w-2xl">
+                    Explore a curated selection of my naval architecture work, ranging from commercial vessel design to advanced offshore structural analysis.
+                </p>
+</div>
+<!-- Filter Tabs -->
+<div class="mb-10 overflow-x-auto">
+<div class="flex border-b border-slate-200 dark:border-slate-800 gap-8 min-w-max">
+<button class="group flex flex-col items-center justify-center border-b-[3px] border-b-primary text-slate-900 dark:text-white pb-3 px-1 transition-all">
+<span class="text-sm font-bold tracking-wide">All</span>
+</button>
+<button class="group flex flex-col items-center justify-center border-b-[3px] border-b-transparent hover:border-b-slate-300 dark:hover:border-b-slate-600 text-slate-500 dark:text-slate-400 hover:text-slate-700 dark:hover:text-slate-200 pb-3 px-1 transition-all">
+<span class="text-sm font-bold tracking-wide">Vessels</span>
+</button>
+<button class="group flex flex-col items-center justify-center border-b-[3px] border-b-transparent hover:border-b-slate-300 dark:hover:border-b-slate-600 text-slate-500 dark:text-slate-400 hover:text-slate-700 dark:hover:text-slate-200 pb-3 px-1 transition-all">
+<span class="text-sm font-bold tracking-wide">Offshore</span>
+</button>
+<button class="group flex flex-col items-center justify-center border-b-[3px] border-b-transparent hover:border-b-slate-300 dark:hover:border-b-slate-600 text-slate-500 dark:text-slate-400 hover:text-slate-700 dark:hover:text-slate-200 pb-3 px-1 transition-all">
+<span class="text-sm font-bold tracking-wide">Research</span>
+</button>
+</div>
+</div>
+<!-- Projects Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- Card 1 -->
+<div class="flex flex-col bg-white dark:bg-slate-800 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow border border-slate-200 dark:border-slate-700 group">
+<div class="relative h-48 w-full overflow-hidden bg-slate-100 dark:bg-slate-900">
+<div class="absolute top-3 left-3 z-10">
+<span class="inline-flex items-center rounded-full bg-primary/90 px-2.5 py-0.5 text-xs font-semibold text-white shadow-sm">
+                                Vessels
+                            </span>
+</div>
+<img alt="Large bulk carrier ship sailing in open ocean" class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Large bulk carrier ship sailing in open ocean" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDWexcScFDbK-Bw5e_1YYP2oz9wtDPhy_Zibs-BHWk0OFvFlLP-Ln7FjnH35MibMsWAikgJgW_sv6yp4hS18myVYGKdakZ2UiNAS5ILTOuJQVihcrtU6vNbMDiJwlGXGxrlnky9-6AmAaygEAjPqlLUoPcWaK-WWg_EEqrqMml5Mipa5SwVAOcgvgApunN6P5jMgeKgM5PF0a05lorO7w-YxDJ69IkOqRonr0Fmpz7zzc__KcUqAiXppJHZXnIs4ns0t1Gy_UfUQH0"/>
+</div>
+<div class="flex flex-col flex-1 p-5">
+<div class="flex gap-2 mb-3">
+<span class="inline-flex items-center rounded-md bg-slate-100 dark:bg-slate-700 px-2 py-1 text-xs font-medium text-slate-600 dark:text-slate-300 ring-1 ring-inset ring-slate-500/10">AutoCAD</span>
+<span class="inline-flex items-center rounded-md bg-slate-100 dark:bg-slate-700 px-2 py-1 text-xs font-medium text-slate-600 dark:text-slate-300 ring-1 ring-inset ring-slate-500/10">Rhino</span>
+</div>
+<h3 class="text-lg font-bold text-slate-900 dark:text-white mb-2 leading-tight">180,000 DWT Bulk Carrier</h3>
+<p class="text-slate-600 dark:text-slate-300 text-sm mb-5 line-clamp-3">Complete structural design and stability analysis for a Capesize bulk carrier, optimizing cargo capacity while maintaining fuel efficiency standards.</p>
+<div class="mt-auto pt-4 border-t border-slate-100 dark:border-slate-700">
+<button class="flex items-center gap-1 text-sm font-bold text-primary dark:text-blue-400 hover:underline">
+                                View Details 
+                                <span class="material-symbols-outlined text-sm font-bold">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="flex flex-col bg-white dark:bg-slate-800 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow border border-slate-200 dark:border-slate-700 group">
+<div class="relative h-48 w-full overflow-hidden bg-slate-100 dark:bg-slate-900">
+<div class="absolute top-3 left-3 z-10">
+<span class="inline-flex items-center rounded-full bg-primary/90 px-2.5 py-0.5 text-xs font-semibold text-white shadow-sm">
+                                Offshore
+                            </span>
+</div>
+<img alt="FPSO vessel offshore platform at sea" class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="FPSO vessel offshore platform at sea" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAgBasAYyu3WdeUYMvJbYFRnOUrxysPJhPikxcyv17Odyd7rvVKknFtMvureE67i1dLnwdnzILb2yBD8ulCkc0gp5T4bg8sDURqTuKUU47vAwkZT20Xx2j9I1nsNUpszTN0vj1nTBUE8hodBIgrCXTRfZjgOJyPO9y_wB0XaRHG1ZvhVNklOEFG8CtvAnpxHKBuwKrdiJyqGewqL-LjxuvMy7m97rLYe0dfkmC3UPpDC5t52cm3OdbBc81r2evdUk-V2quBr5JOX2A"/>
+</div>
+<div class="flex flex-col flex-1 p-5">
+<div class="flex gap-2 mb-3">
+<span class="inline-flex items-center rounded-md bg-slate-100 dark:bg-slate-700 px-2 py-1 text-xs font-medium text-slate-600 dark:text-slate-300 ring-1 ring-inset ring-slate-500/10">ANSYS</span>
+<span class="inline-flex items-center rounded-md bg-slate-100 dark:bg-slate-700 px-2 py-1 text-xs font-medium text-slate-600 dark:text-slate-300 ring-1 ring-inset ring-slate-500/10">HydroD</span>
+</div>
+<h3 class="text-lg font-bold text-slate-900 dark:text-white mb-2 leading-tight">FPSO Hull Hydrodynamic Analysis</h3>
+<p class="text-slate-600 dark:text-slate-300 text-sm mb-5 line-clamp-3">Computational Fluid Dynamics (CFD) simulation to assess hull performance under extreme wave conditions for a floating production storage and offloading unit.</p>
+<div class="mt-auto pt-4 border-t border-slate-100 dark:border-slate-700">
+<button class="flex items-center gap-1 text-sm font-bold text-primary dark:text-blue-400 hover:underline">
+                                View Details 
+                                <span class="material-symbols-outlined text-sm font-bold">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="flex flex-col bg-white dark:bg-slate-800 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow border border-slate-200 dark:border-slate-700 group">
+<div class="relative h-48 w-full overflow-hidden bg-slate-100 dark:bg-slate-900">
+<div class="absolute top-3 left-3 z-10">
+<span class="inline-flex items-center rounded-full bg-primary/90 px-2.5 py-0.5 text-xs font-semibold text-white shadow-sm">
+                                Vessels
+                            </span>
+</div>
+<img alt="LNG carrier ship transporting gas" class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="LNG carrier ship transporting gas" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC-NU1qObIUieEP1RCyZoiWPopS_8nr4f3uJjfCfJO8MmJp4ycoYJjnip4dYZ64jfmTuC1JNi9x8Rz0ORbWDUBNLsi7i-5grDGZf7GrlngCGxdgZTBAUQCCjLxyfUen-1Yxs5ZFkpZIkumaxwB-LF8GpqL-7bvaAoOyly3HlIwZ9cQyGrcr48qKJIxQLVjOJL07w_Brb_4EryYEho6HqRrsmOiHCAg0GDSazaNVUmRfjcIeL7qm2tIDlRsxvPcCN9OSIxg4-X7KIdQ"/>
+</div>
+<div class="flex flex-col flex-1 p-5">
+<div class="flex gap-2 mb-3">
+<span class="inline-flex items-center rounded-md bg-slate-100 dark:bg-slate-700 px-2 py-1 text-xs font-medium text-slate-600 dark:text-slate-300 ring-1 ring-inset ring-slate-500/10">GTT Mark III</span>
+<span class="inline-flex items-center rounded-md bg-slate-100 dark:bg-slate-700 px-2 py-1 text-xs font-medium text-slate-600 dark:text-slate-300 ring-1 ring-inset ring-slate-500/10">AVEVA Marine</span>
+</div>
+<h3 class="text-lg font-bold text-slate-900 dark:text-white mb-2 leading-tight">LNG Carrier Tank Design</h3>
+<p class="text-slate-600 dark:text-slate-300 text-sm mb-5 line-clamp-3">Specialized membrane containment system design for LNG transport, focusing on thermal insulation efficiency and boil-off rate reduction.</p>
+<div class="mt-auto pt-4 border-t border-slate-100 dark:border-slate-700">
+<button class="flex items-center gap-1 text-sm font-bold text-primary dark:text-blue-400 hover:underline">
+                                View Details 
+                                <span class="material-symbols-outlined text-sm font-bold">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Card 4 -->
+<div class="flex flex-col bg-white dark:bg-slate-800 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow border border-slate-200 dark:border-slate-700 group">
+<div class="relative h-48 w-full overflow-hidden bg-slate-100 dark:bg-slate-900">
+<div class="absolute top-3 left-3 z-10">
+<span class="inline-flex items-center rounded-full bg-primary/90 px-2.5 py-0.5 text-xs font-semibold text-white shadow-sm">
+                                Defense
+                            </span>
+</div>
+<img alt="Military naval vessel on patrol" class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Military naval vessel on patrol" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAChdo2S62w__Vy2PWryCBynpYjCzSiMPcvn-PLR0Iywd9Uo2XKtCy9eKyo76dmIxHPTK2MAoUU4EVofWDfIcsIqJgOZbjjs2WnzCAd4IcoR5picOMC0thdIlQya_HKGSvrWJ91KYVGQA4c99lFIHeK2Sr6Xd0Fut3T49CT0RdGz9O3aCdQIy-QxXwbGX2smSKyzVsX05daz2v876vbwZ188pow7JnCsu7DxTmRfgzYX-96bMD3gr1kcmOjOErcehpK5mf2M6qPvqQ"/>
+</div>
+<div class="flex flex-col flex-1 p-5">
+<div class="flex gap-2 mb-3">
+<span class="inline-flex items-center rounded-md bg-slate-100 dark:bg-slate-700 px-2 py-1 text-xs font-medium text-slate-600 dark:text-slate-300 ring-1 ring-inset ring-slate-500/10">Maxsurf</span>
+<span class="inline-flex items-center rounded-md bg-slate-100 dark:bg-slate-700 px-2 py-1 text-xs font-medium text-slate-600 dark:text-slate-300 ring-1 ring-inset ring-slate-500/10">Shock Analysis</span>
+</div>
+<h3 class="text-lg font-bold text-slate-900 dark:text-white mb-2 leading-tight">Naval Patrol Vessel</h3>
+<p class="text-slate-600 dark:text-slate-300 text-sm mb-5 line-clamp-3">Hull form optimization for high-speed maneuverability and seakeeping performance for a next-generation coastal patrol vessel.</p>
+<div class="mt-auto pt-4 border-t border-slate-100 dark:border-slate-700">
+<button class="flex items-center gap-1 text-sm font-bold text-primary dark:text-blue-400 hover:underline">
+                                View Details 
+                                <span class="material-symbols-outlined text-sm font-bold">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Card 5 -->
+<div class="flex flex-col bg-white dark:bg-slate-800 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow border border-slate-200 dark:border-slate-700 group">
+<div class="relative h-48 w-full overflow-hidden bg-slate-100 dark:bg-slate-900">
+<div class="absolute top-3 left-3 z-10">
+<span class="inline-flex items-center rounded-full bg-primary/90 px-2.5 py-0.5 text-xs font-semibold text-white shadow-sm">
+                                Offshore
+                            </span>
+</div>
+<img alt="Offshore wind farm turbines in the ocean" class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Offshore wind farm turbines in the ocean" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA3IWjM4qjKOf25sFPQk5YFkBeHjQ3sngaGLeXXDO2ZHtKfMfKmOhr9ILDVT884_fX0_yl8Qu5vsWVufLDFw-r_j-oucXx5Q064m02uKWDDHovqxgm9A756CDOJz4cIpVFiOcZ2aCMt3YVz59mQNvfaVudalg1-kNcn5WBmC5OEhW62dv0htXMmO0ObQJp8zhK0rX7FGGVTI4878lSxZAPRtlvvKsWFQjhLHZez7pKDZG4y7KhOTxnFqWo3qAjs9wHyoXf1P3U6sOk"/>
+</div>
+<div class="flex flex-col flex-1 p-5">
+<div class="flex gap-2 mb-3">
+<span class="inline-flex items-center rounded-md bg-slate-100 dark:bg-slate-700 px-2 py-1 text-xs font-medium text-slate-600 dark:text-slate-300 ring-1 ring-inset ring-slate-500/10">SACS</span>
+<span class="inline-flex items-center rounded-md bg-slate-100 dark:bg-slate-700 px-2 py-1 text-xs font-medium text-slate-600 dark:text-slate-300 ring-1 ring-inset ring-slate-500/10">Python</span>
+</div>
+<h3 class="text-lg font-bold text-slate-900 dark:text-white mb-2 leading-tight">Offshore Wind Foundation</h3>
+<p class="text-slate-600 dark:text-slate-300 text-sm mb-5 line-clamp-3">Structural integrity analysis of jacket foundations for 15MW wind turbines, considering fatigue life and environmental loads.</p>
+<div class="mt-auto pt-4 border-t border-slate-100 dark:border-slate-700">
+<button class="flex items-center gap-1 text-sm font-bold text-primary dark:text-blue-400 hover:underline">
+                                View Details 
+                                <span class="material-symbols-outlined text-sm font-bold">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Card 6 -->
+<div class="flex flex-col bg-white dark:bg-slate-800 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow border border-slate-200 dark:border-slate-700 group">
+<div class="relative h-48 w-full overflow-hidden bg-slate-100 dark:bg-slate-900">
+<div class="absolute top-3 left-3 z-10">
+<span class="inline-flex items-center rounded-full bg-primary/90 px-2.5 py-0.5 text-xs font-semibold text-white shadow-sm">
+                                Research
+                            </span>
+</div>
+<img alt="Container ship loaded with cargo containers" class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Container ship loaded with cargo containers" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCtuB7bperDuA4uGodkIeLtX43XP_Moh4-dBBRdM2PXZwig5npH7Dy5tlmeqzdCMsEHegzp96dz9e4A5aL0Ydlg9qhCO9cVBHK3Fhp3F3WfQIQYUxjjFvsaCGB0LCF4rOVBA1e69i4Mt0QIP5JMAJjzbET1hF_bTi2fqcNKcEo65jZlMQYgUzTgp1XLqqL8PHOCdcO0nyF9aXhn7qR1KUV1qJAVfHeXthVohdZgipHUu9TYDrOKiFy2K_Ht0jilJC8XrzDIcIQh50k"/>
+</div>
+<div class="flex flex-col flex-1 p-5">
+<div class="flex gap-2 mb-3">
+<span class="inline-flex items-center rounded-md bg-slate-100 dark:bg-slate-700 px-2 py-1 text-xs font-medium text-slate-600 dark:text-slate-300 ring-1 ring-inset ring-slate-500/10">Green Tech</span>
+<span class="inline-flex items-center rounded-md bg-slate-100 dark:bg-slate-700 px-2 py-1 text-xs font-medium text-slate-600 dark:text-slate-300 ring-1 ring-inset ring-slate-500/10">Retrofit</span>
+</div>
+<h3 class="text-lg font-bold text-slate-900 dark:text-white mb-2 leading-tight">Container Ship Retrofit</h3>
+<p class="text-slate-600 dark:text-slate-300 text-sm mb-5 line-clamp-3">Feasibility study and design implementation for retrofitting a Panamax container vessel with scrubber systems to meet IMO 2020 regulations.</p>
+<div class="mt-auto pt-4 border-t border-slate-100 dark:border-slate-700">
+<button class="flex items-center gap-1 text-sm font-bold text-primary dark:text-blue-400 hover:underline">
+                                View Details 
+                                <span class="material-symbols-outlined text-sm font-bold">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Pagination / Load More -->
+<div class="mt-16 flex justify-center">
+<button class="group flex items-center justify-center gap-2 rounded-lg border-2 border-primary/20 px-6 py-3 text-sm font-bold text-primary dark:text-white hover:border-primary hover:bg-primary/5 transition-all">
+                    Load More Projects
+                    <span class="material-symbols-outlined text-lg transition-transform group-hover:translate-y-0.5">expand_more</span>
+</button>
+</div>
+  </div>
+</section>
+
+<!-- ========== SKILLS SECTION ========== -->
+<section id="skills" class="py-20 lg:py-28 bg-white dark:bg-slate-900 border-t border-primary/10 dark:border-slate-800">
+  <div class="max-w-[1280px] mx-auto px-6 md:px-10">
+    <!-- Header Section -->
+<div class="mb-16">
+<h2 class="text-4xl md:text-5xl font-black text-slate-900 dark:text-white mb-4 tracking-tight">SKILLS &amp; EXPERTISE</h2>
+<div class="h-1.5 w-24 bg-primary rounded-full"></div>
+<p class="mt-6 text-lg text-slate-600 dark:text-slate-400 max-w-3xl leading-relaxed">
+                Specialized in ship structural design and hydrodynamic analysis with extensive experience in industry-standard engineering software. Committed to innovation and safety in maritime engineering.
+            </p>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+<!-- Left Column: Software Skills (Takes up 7/12 on large screens) -->
+<div class="lg:col-span-7 space-y-12">
+<!-- Engineering Software -->
+<section>
+<div class="flex items-center gap-3 mb-8">
+<span class="material-symbols-outlined text-primary text-3xl">terminal</span>
+<h3 class="text-2xl font-bold text-slate-900 dark:text-white">Engineering Software</h3>
+</div>
+<div class="bg-white dark:bg-slate-800 rounded-2xl p-8 shadow-sm border border-slate-100 dark:border-slate-700 space-y-8">
+<!-- Skill Item -->
+<div class="group">
+<div class="flex justify-between items-end mb-2">
+<span class="font-semibold text-slate-900 dark:text-white text-lg">AutoCAD</span>
+<span class="font-bold text-primary dark:text-primary/90">95%</span>
+</div>
+<div class="w-full bg-slate-100 dark:bg-slate-700 rounded-full h-3 overflow-hidden">
+<div class="bg-primary h-3 rounded-full transition-all duration-1000 ease-out" style="width: 95%"></div>
+</div>
+<p class="text-xs text-slate-500 dark:text-slate-400 mt-2 font-medium">Expert • 2D Drafting &amp; 3D Modeling</p>
+</div>
+<!-- Skill Item -->
+<div class="group">
+<div class="flex justify-between items-end mb-2">
+<span class="font-semibold text-slate-900 dark:text-white text-lg">NAPA</span>
+<span class="font-bold text-primary dark:text-primary/90">90%</span>
+</div>
+<div class="w-full bg-slate-100 dark:bg-slate-700 rounded-full h-3 overflow-hidden">
+<div class="bg-primary h-3 rounded-full transition-all duration-1000 ease-out" style="width: 90%"></div>
+</div>
+<p class="text-xs text-slate-500 dark:text-slate-400 mt-2 font-medium">Advanced • Stability Calculations</p>
+</div>
+<!-- Skill Item -->
+<div class="group">
+<div class="flex justify-between items-end mb-2">
+<span class="font-semibold text-slate-900 dark:text-white text-lg">ANSYS Structural</span>
+<span class="font-bold text-primary dark:text-primary/90">85%</span>
+</div>
+<div class="w-full bg-slate-100 dark:bg-slate-700 rounded-full h-3 overflow-hidden">
+<div class="bg-primary h-3 rounded-full transition-all duration-1000 ease-out" style="width: 85%"></div>
+</div>
+<p class="text-xs text-slate-500 dark:text-slate-400 mt-2 font-medium">Advanced • Finite Element Analysis</p>
+</div>
+<!-- Skill Item -->
+<div class="group">
+<div class="flex justify-between items-end mb-2">
+<span class="font-semibold text-slate-900 dark:text-white text-lg">Rhinoceros 3D</span>
+<span class="font-bold text-primary dark:text-primary/90">80%</span>
+</div>
+<div class="w-full bg-slate-100 dark:bg-slate-700 rounded-full h-3 overflow-hidden">
+<div class="bg-primary h-3 rounded-full transition-all duration-1000 ease-out" style="width: 80%"></div>
+</div>
+<p class="text-xs text-slate-500 dark:text-slate-400 mt-2 font-medium">Proficient • Hull Surface Modeling</p>
+</div>
+<!-- Skill Item -->
+<div class="group">
+<div class="flex justify-between items-end mb-2">
+<span class="font-semibold text-slate-900 dark:text-white text-lg">MATLAB</span>
+<span class="font-bold text-primary dark:text-primary/90">75%</span>
+</div>
+<div class="w-full bg-slate-100 dark:bg-slate-700 rounded-full h-3 overflow-hidden">
+<div class="bg-primary h-3 rounded-full transition-all duration-1000 ease-out" style="width: 75%"></div>
+</div>
+<p class="text-xs text-slate-500 dark:text-slate-400 mt-2 font-medium">Proficient • Data Analysis &amp; Simulation</p>
+</div>
+</div>
+</section>
+<!-- Naval Architecture Expertise Cards -->
+<section>
+<div class="flex items-center gap-3 mb-8">
+<span class="material-symbols-outlined text-primary text-3xl">architecture</span>
+<h3 class="text-2xl font-bold text-slate-900 dark:text-white">Naval Architecture Expertise</h3>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<!-- Card 1 -->
+<div class="bg-white dark:bg-slate-800 p-6 rounded-xl border border-slate-200 dark:border-slate-700 border-l-4 border-l-primary hover:shadow-lg transition-shadow">
+<div class="size-12 rounded-lg bg-primary/10 flex items-center justify-center text-primary mb-4">
+<span class="material-symbols-outlined text-2xl">grid_on</span>
+</div>
+<h4 class="text-xl font-bold text-slate-900 dark:text-white mb-2">Ship Structural Design</h4>
+<p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+                                Expertise in hull scantling calculations, structural arrangement, and compliance with classification society rules (DNV, ABS).
+                            </p>
+</div>
+<!-- Card 2 -->
+<div class="bg-white dark:bg-slate-800 p-6 rounded-xl border border-slate-200 dark:border-slate-700 border-l-4 border-l-primary hover:shadow-lg transition-shadow">
+<div class="size-12 rounded-lg bg-primary/10 flex items-center justify-center text-primary mb-4">
+<span class="material-symbols-outlined text-2xl">water</span>
+</div>
+<h4 class="text-xl font-bold text-slate-900 dark:text-white mb-2">Hydrodynamic Analysis</h4>
+<p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+                                Resistance and propulsion prediction, seakeeping analysis, and maneuvering simulations using CFD tools.
+                            </p>
+</div>
+<!-- Card 3 -->
+<div class="bg-white dark:bg-slate-800 p-6 rounded-xl border border-slate-200 dark:border-slate-700 border-l-4 border-l-primary hover:shadow-lg transition-shadow">
+<div class="size-12 rounded-lg bg-primary/10 flex items-center justify-center text-primary mb-4">
+<span class="material-symbols-outlined text-2xl">balance</span>
+</div>
+<h4 class="text-xl font-bold text-slate-900 dark:text-white mb-2">Stability Calculations</h4>
+<p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+                                Intact and damage stability assessment, weight estimation, and preparation of stability booklets.
+                            </p>
+</div>
+<!-- Card 4 -->
+<div class="bg-white dark:bg-slate-800 p-6 rounded-xl border border-slate-200 dark:border-slate-700 border-l-4 border-l-primary hover:shadow-lg transition-shadow">
+<div class="size-12 rounded-lg bg-primary/10 flex items-center justify-center text-primary mb-4">
+<span class="material-symbols-outlined text-2xl">precision_manufacturing</span>
+</div>
+<h4 class="text-xl font-bold text-slate-900 dark:text-white mb-2">Production Engineering</h4>
+<p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+                                Detailed design for production, block assembly planning, and welding sequence optimization.
+                            </p>
+</div>
+</div>
+</section>
+</div>
+<!-- Right Column: Languages & Certs (Takes up 5/12 on large screens) -->
+<div class="lg:col-span-5 space-y-12">
+<!-- Languages -->
+<section>
+<div class="flex items-center gap-3 mb-8">
+<span class="material-symbols-outlined text-primary text-3xl">translate</span>
+<h3 class="text-2xl font-bold text-slate-900 dark:text-white">Languages</h3>
+</div>
+<div class="bg-primary text-white rounded-2xl p-8 relative overflow-hidden">
+<!-- Abstract background decoration -->
+<div class="absolute -top-10 -right-10 w-40 h-40 bg-white/10 rounded-full blur-2xl"></div>
+<div class="absolute bottom-0 left-0 w-32 h-32 bg-white/5 rounded-full blur-xl"></div>
+<div class="space-y-6 relative z-10">
+<div class="flex items-center justify-between border-b border-white/20 pb-4">
+<div>
+<p class="text-lg font-bold">Korean</p>
+<p class="text-sm text-blue-200">Native</p>
+</div>
+<span class="material-symbols-outlined text-blue-200">check_circle</span>
+</div>
+<div class="flex items-center justify-between border-b border-white/20 pb-4">
+<div>
+<p class="text-lg font-bold">English</p>
+<p class="text-sm text-blue-200">Professional Working</p>
+</div>
+<span class="material-symbols-outlined text-blue-200">check_circle</span>
+</div>
+<div class="flex items-center justify-between">
+<div>
+<p class="text-lg font-bold">Japanese</p>
+<p class="text-sm text-blue-200">Intermediate (JLPT N3)</p>
+</div>
+<span class="material-symbols-outlined text-blue-200">check_circle</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Certifications -->
+<section>
+<div class="flex items-center gap-3 mb-8">
+<span class="material-symbols-outlined text-primary text-3xl">workspace_premium</span>
+<h3 class="text-2xl font-bold text-slate-900 dark:text-white">Certifications</h3>
+</div>
+<div class="space-y-4">
+<!-- Cert Item -->
+<div class="flex gap-4 p-5 bg-white dark:bg-slate-800 rounded-xl border border-slate-200 dark:border-slate-700 shadow-sm">
+<div class="flex-shrink-0 mt-1">
+<div class="size-10 rounded-full bg-slate-100 dark:bg-slate-700 flex items-center justify-center">
+<span class="material-symbols-outlined text-slate-500 dark:text-slate-400">verified</span>
+</div>
+</div>
+<div>
+<h4 class="text-lg font-bold text-slate-900 dark:text-white">Professional Engineer (Naval Arch)</h4>
+<p class="text-sm text-primary font-medium mb-1">Human Resources Development Service of Korea</p>
+<p class="text-xs text-slate-500 dark:text-slate-400">Issued Oct 2021</p>
+</div>
+</div>
+<!-- Cert Item -->
+<div class="flex gap-4 p-5 bg-white dark:bg-slate-800 rounded-xl border border-slate-200 dark:border-slate-700 shadow-sm">
+<div class="flex-shrink-0 mt-1">
+<div class="size-10 rounded-full bg-slate-100 dark:bg-slate-700 flex items-center justify-center">
+<span class="material-symbols-outlined text-slate-500 dark:text-slate-400">verified</span>
+</div>
+</div>
+<div>
+<h4 class="text-lg font-bold text-slate-900 dark:text-white">Certified NAPA User</h4>
+<p class="text-sm text-primary font-medium mb-1">NAPA Group</p>
+<p class="text-xs text-slate-500 dark:text-slate-400">Issued Mar 2020</p>
+</div>
+</div>
+<!-- Cert Item -->
+<div class="flex gap-4 p-5 bg-white dark:bg-slate-800 rounded-xl border border-slate-200 dark:border-slate-700 shadow-sm">
+<div class="flex-shrink-0 mt-1">
+<div class="size-10 rounded-full bg-slate-100 dark:bg-slate-700 flex items-center justify-center">
+<span class="material-symbols-outlined text-slate-500 dark:text-slate-400">safety_check</span>
+</div>
+</div>
+<div>
+<h4 class="text-lg font-bold text-slate-900 dark:text-white">Safety Management Specialist</h4>
+<p class="text-sm text-primary font-medium mb-1">Korea Occupational Safety Agency</p>
+<p class="text-xs text-slate-500 dark:text-slate-400">Issued Jan 2019</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Education Preview -->
+<section>
+<div class="flex items-center gap-3 mb-8 mt-12">
+<span class="material-symbols-outlined text-primary text-3xl">school</span>
+<h3 class="text-2xl font-bold text-slate-900 dark:text-white">Education</h3>
+</div>
+<div class="relative pl-6 border-l-2 border-slate-200 dark:border-slate-700 space-y-8">
+<div class="relative">
+<div class="absolute -left-[31px] top-1.5 size-4 bg-primary rounded-full ring-4 ring-white dark:ring-background-dark"></div>
+<h4 class="text-lg font-bold text-slate-900 dark:text-white">M.S. in Naval Architecture</h4>
+<p class="text-slate-600 dark:text-slate-300">Seoul National University</p>
+<p class="text-xs text-slate-500 dark:text-slate-400 mt-1">2016 - 2018</p>
+</div>
+<div class="relative">
+<div class="absolute -left-[31px] top-1.5 size-4 bg-slate-300 dark:bg-slate-600 rounded-full ring-4 ring-white dark:ring-background-dark"></div>
+<h4 class="text-lg font-bold text-slate-900 dark:text-white">B.S. in Ocean Engineering</h4>
+<p class="text-slate-600 dark:text-slate-300">Pusan National University</p>
+<p class="text-xs text-slate-500 dark:text-slate-400 mt-1">2012 - 2016</p>
+</div>
+</div>
+</section>
+</div>
+</div>
+  </div>
+</section>
+
+<!-- ========== CONTACT SECTION ========== -->
+<section id="contact" class="py-20 lg:py-28 bg-background-light dark:bg-background-dark border-t border-primary/10 dark:border-slate-800">
+  <div class="max-w-[1280px] mx-auto px-6 md:px-10">
+    <!-- Header Section -->
+<div class="mb-12 lg:mb-16 max-w-2xl">
+<h1 class="text-4xl md:text-5xl font-black tracking-tight text-slate-900 dark:text-white mb-6 uppercase">Get in Touch</h1>
+<p class="text-slate-600 dark:text-slate-400 text-lg md:text-xl leading-relaxed">
+                Interested in collaboration or have a research inquiry? I am always open to discussing new projects, creative ideas or opportunities to be part of your visions.
+            </p>
+</div>
+<div class="grid lg:grid-cols-12 gap-12 lg:gap-20">
+<!-- Left Column: Contact Info -->
+<div class="lg:col-span-5 space-y-8">
+<div class="bg-white dark:bg-slate-900 rounded-2xl p-8 border border-slate-200 dark:border-slate-800 shadow-sm">
+<h3 class="text-lg font-bold text-slate-900 dark:text-white mb-6 border-b border-slate-100 dark:border-slate-800 pb-4">Contact Information</h3>
+<div class="space-y-6">
+<div class="flex items-start gap-4">
+<div class="p-3 rounded-lg bg-primary/10 text-primary shrink-0">
+<span class="material-symbols-outlined">mail</span>
+</div>
+<div>
+<p class="text-sm font-medium text-slate-500 dark:text-slate-400 mb-1">Email</p>
+<a class="text-slate-900 dark:text-white font-medium hover:text-primary transition-colors" href="mailto:seoyeon.park@naval.kr">seoyeon.park@naval.kr</a>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<div class="p-3 rounded-lg bg-primary/10 text-primary shrink-0">
+<span class="material-symbols-outlined">call</span>
+</div>
+<div>
+<p class="text-sm font-medium text-slate-500 dark:text-slate-400 mb-1">Phone</p>
+<p class="text-slate-900 dark:text-white font-medium">+82-10-XXXX-XXXX</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<div class="p-3 rounded-lg bg-primary/10 text-primary shrink-0">
+<span class="material-symbols-outlined">location_on</span>
+</div>
+<div>
+<p class="text-sm font-medium text-slate-500 dark:text-slate-400 mb-1">Location</p>
+<p class="text-slate-900 dark:text-white font-medium">Seoul, South Korea</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<div class="p-3 rounded-lg bg-primary/10 text-primary shrink-0">
+<span class="material-symbols-outlined">link</span>
+</div>
+<div>
+<p class="text-sm font-medium text-slate-500 dark:text-slate-400 mb-1">Social</p>
+<a class="text-slate-900 dark:text-white font-medium hover:text-primary transition-colors" href="#">linkedin.com/in/seoyeonpark</a>
+</div>
+</div>
+</div>
+</div>
+<!-- Map Placeholder -->
+<div class="w-full h-64 rounded-2xl overflow-hidden relative shadow-md bg-slate-200 dark:bg-slate-800 group">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="Map view of Seoul city center" data-location="Seoul, South Korea" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBHMDpXBU3KSETEss6JgTM9KFMdFSWSyjeCVQGHaIfV7RubtoSRmBAnmiIbQCOtYeejsLS1d7nQNiizMVWrf8DBm-ZLhZ8mCGZmQObsMRJbmP0iwJ4E4qhOUnGhIXThXL294csGr5ivGJSokG2bFrGsCTA54QkqinahJT9cZQapQTTUpx-nFS2F1ZMdIyHPQOTXcH_YNu6wDWbHNNjbxBOQAyeY6erWNb-ZC_rIsqZ4Pyk-i1pvTb1Hwr62lwCbBJN4Agm_PbuO5ew');">
+</div>
+<div class="absolute inset-0 bg-primary/20 mix-blend-multiply"></div>
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+<div class="relative">
+<span class="material-symbols-outlined text-4xl text-primary drop-shadow-lg animate-bounce">location_on</span>
+<div class="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 w-4 h-2 bg-black/30 rounded-[100%] blur-[2px]"></div>
+</div>
+</div>
+<div class="absolute bottom-4 left-4 bg-white/90 dark:bg-slate-900/90 backdrop-blur px-3 py-1 rounded text-xs font-bold text-slate-900 dark:text-white shadow-sm">
+                        Seoul, South Korea
+                    </div>
+</div>
+</div>
+<!-- Right Column: Contact Form -->
+<div class="lg:col-span-7">
+<div class="bg-white dark:bg-slate-900 rounded-2xl p-8 md:p-10 border border-slate-200 dark:border-slate-800 shadow-sm h-full">
+<h3 class="text-2xl font-bold text-slate-900 dark:text-white mb-8">Send a Message</h3>
+<form action="#" class="space-y-6">
+<div class="grid md:grid-cols-2 gap-6">
+<div class="space-y-2">
+<label class="text-sm font-semibold text-slate-700 dark:text-slate-300" for="name">Name</label>
+<input class="w-full h-12 px-4 rounded-lg border border-slate-300 dark:border-slate-700 bg-background-light dark:bg-slate-800 text-slate-900 dark:text-white focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all placeholder:text-slate-400" id="name" placeholder="Your full name" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="text-sm font-semibold text-slate-700 dark:text-slate-300" for="email">Email</label>
+<input class="w-full h-12 px-4 rounded-lg border border-slate-300 dark:border-slate-700 bg-background-light dark:bg-slate-800 text-slate-900 dark:text-white focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all placeholder:text-slate-400" id="email" placeholder="your@email.com" type="email"/>
+</div>
+</div>
+<div class="space-y-2">
+<label class="text-sm font-semibold text-slate-700 dark:text-slate-300" for="subject">Subject</label>
+<div class="relative">
+<select class="appearance-none w-full h-12 px-4 pr-10 rounded-lg border border-slate-300 dark:border-slate-700 bg-background-light dark:bg-slate-800 text-slate-900 dark:text-white focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all cursor-pointer" id="subject">
+<option disabled="" selected="" value="">Select a topic</option>
+<option value="job">Job Opportunity</option>
+<option value="project">Project Collaboration</option>
+<option value="research">Research Inquiry</option>
+<option value="general">General Question</option>
+</select>
+<div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-4 text-slate-500">
+<span class="material-symbols-outlined text-xl">expand_more</span>
+</div>
+</div>
+</div>
+<div class="space-y-2">
+<label class="text-sm font-semibold text-slate-700 dark:text-slate-300" for="message">Message</label>
+<textarea class="w-full p-4 rounded-lg border border-slate-300 dark:border-slate-700 bg-background-light dark:bg-slate-800 text-slate-900 dark:text-white focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all resize-none placeholder:text-slate-400" id="message" placeholder="Tell me about your project or inquiry..." rows="6"></textarea>
+</div>
+<div class="pt-2">
+<button class="group w-full md:w-auto min-w-[160px] h-12 bg-primary hover:bg-blue-700 text-white font-bold rounded-lg transition-all flex items-center justify-center gap-2 shadow-lg shadow-primary/30" type="button">
+<span>Send Message</span>
+<span class="material-symbols-outlined text-lg group-hover:translate-x-1 transition-transform">send</span>
+</button>
+</div>
+</form>
+</div>
+</div>
+</div>
+  </div>
+</section>
+
+<!-- ========== FOOTER ========== -->
+<footer class="bg-background-dark text-white py-12 border-t border-slate-800">
+<div class="max-w-[1280px] mx-auto px-6">
+<div class="flex flex-col md:flex-row justify-between items-center gap-8">
+<div class="text-center md:text-left">
+<div class="flex items-center gap-2 justify-center md:justify-start mb-2">
+<span class="material-symbols-outlined text-primary">sailing</span>
+<h3 class="font-bold text-lg">Seo Yeon Park</h3>
+</div>
+<p class="text-slate-400 text-sm">Naval Architect &amp; Marine Engineering Researcher</p>
+</div>
+<div class="flex gap-6">
+<a aria-label="LinkedIn" class="text-slate-400 hover:text-primary transition-colors" href="#">
+<div class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center border border-slate-700 hover:border-primary">
+<!-- Simple svg replacement for icon -->
+<span class="material-symbols-outlined text-xl">work</span>
+</div>
+</a>
+<a aria-label="GitHub" class="text-slate-400 hover:text-primary transition-colors" href="#">
+<div class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center border border-slate-700 hover:border-primary">
+<span class="material-symbols-outlined text-xl">code</span>
+</div>
+</a>
+<a aria-label="ResearchGate" class="text-slate-400 hover:text-primary transition-colors" href="#">
+<div class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center border border-slate-700 hover:border-primary">
+<span class="material-symbols-outlined text-xl">school</span>
+</div>
+</a>
+</div>
+</div>
+<div class="mt-8 pt-8 border-t border-slate-800 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-slate-500">
+<p>© 2024 Seo Yeon Park. All rights reserved.</p>
+<div class="flex gap-6">
+<a class="hover:text-slate-300" href="#">Privacy Policy</a>
+<a class="hover:text-slate-300" href="#">Terms of Service</a>
+</div>
+</div>
+</div>
+</footer>
+
+<!-- ========== SCRIPTS ========== -->
+<script>
+  // Mobile menu toggle
+  const menuBtn = document.getElementById('menu-btn');
+  const mobileMenu = document.getElementById('mobile-menu');
+  const menuIcon = document.getElementById('menu-icon');
+
+  menuBtn.addEventListener('click', () => {
+    const isOpen = !mobileMenu.classList.contains('hidden');
+    mobileMenu.classList.toggle('hidden', isOpen);
+    menuIcon.textContent = isOpen ? 'menu' : 'close';
+  });
+
+  function closeMobileMenu() {
+    mobileMenu.classList.add('hidden');
+    menuIcon.textContent = 'menu';
+  }
+
+  // Active nav link highlight on scroll
+  const sections = document.querySelectorAll('section[id]');
+  const navLinks = document.querySelectorAll('nav .nav-link');
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        navLinks.forEach(link => {
+          link.classList.remove('active');
+          if (link.getAttribute('href') === '#' + entry.target.id) {
+            link.classList.add('active');
+          }
+        });
+      }
+    });
+  }, { rootMargin: '-40% 0px -55% 0px' });
+
+  sections.forEach(section => observer.observe(section));
+</script>
+
+</body>
+</html>
